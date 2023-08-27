@@ -1,22 +1,17 @@
 import './App.css';
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { JokePage } from "./pages/JokePage";
+// import { PageNotFound } from "./pages/PageNotFound";
 
 function App() {
   return (
-    <div className="App">
-     <section>
-     <h1>Word Counter</h1>
-     <h2>Free online character and word count tool</h2>
-      <form action="">
-        <input type="textarea" />
-        <section display="flex"><button class="">Clear</button></section>
-        <section display="flex-between">
-          <button class="">Character:0</button>
-          <button class="">Word:0</button>
-        </section>
-        </form>
-     </section>
-
-    </div>
+      <>
+        <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="joke" element={<JokePage />}></Route>
+        </Routes>
+      </>
   );
 }
 
